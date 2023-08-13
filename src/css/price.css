@@ -1,4 +1,12 @@
 /* Andrey */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -10,4 +18,145 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.container-price-list{
+    display: inline;
+    position: relative;
+}
+
+.price-list{
+    flex-direction: row;
+}
+
+.price-item{
+    display: inline;
+    position: relative;
+    margin-top: 30px;
+}
+
+.price-item-text{
+    font-family: Roboto;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 42px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+}
+
+.price-spn{
+    text-align: right;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        display: block;
+        
+}
+
+.price-for-line::before{
+    content: '';
+    position: absolute;
+    height: 0.5px;
+    width: 343px;
+    background: #0A224A;
+    display: block;
+    top: -30px;
+}
+
+.price-item-text::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 343px;
+    background: #0A224A;
+    display: block;
+    bottom: 30px;
+}
+
+.price-container-spn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        max-width: 375px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+
+        .price-for-line::before {
+            content: '';
+            position: absolute;
+            height: 1.5px;
+            width: 704px;
+            background: #0A224A;
+            display: block;
+            top: -30px;
+        }
+    
+        .price-item-text::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 704px;
+            background: #0A224A;
+            display: block;
+            bottom: 30px;
+        }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        padding: 0 60px;
+    }
+
+        .price-for-line::before {
+            content: '';
+            position: absolute;
+            height: 1.5px;
+            width: 1096px;
+            background: #0A224A;
+            display: block;
+            top: -30px;
+        }
+    
+        .price-item-text::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1096px;
+            background: #0A224A;
+            display: block;
+            bottom: 30px;
+        }
+
+                .price-spn {
+                    text-align: right;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    display: block;
+                    padding-right: 225px;
+                }
+    
 }
